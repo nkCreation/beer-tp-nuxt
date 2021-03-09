@@ -5,9 +5,9 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link to="/" class="navbar-item">
+              <NuxtLink to="/" class="navbar-item">
                 <img src="@/assets/logo.svg" alt="MyBeer" />
-              </router-link>
+              </NuxtLink>
 
               <span class="navbar-burger burger" data-target="navbarMenu">
                 <span></span>
@@ -20,9 +20,7 @@
                 <div class="tabs is-right">
                   <ul>
                     <li>
-                      <router-link to="/" active-class="is-active">
-                        Home</router-link
-                      >
+                      <NuxtLink to="/" active-class="is-active"> Home</NuxtLink>
                     </li>
                   </ul>
                 </div>

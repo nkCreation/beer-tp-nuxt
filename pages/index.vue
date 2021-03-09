@@ -13,7 +13,7 @@ export default {
   components: {
     BeerList,
   },
-  async asyncData({ store, payload }) {
+  async asyncData({ store }) {
     await store.dispatch('fetchBeers');
   },
   computed: {
