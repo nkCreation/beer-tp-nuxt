@@ -2,32 +2,7 @@
   <div>
     <section class="hero is-medium is-bold">
       <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <NuxtLink to="/" class="navbar-item">
-                <img src="@/assets/logo.svg" alt="MyBeer" />
-              </NuxtLink>
-
-              <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-                <div class="tabs is-right">
-                  <ul>
-                    <li>
-                      <NuxtLink to="/" active-class="is-active"> Home</NuxtLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
       </div>
 
       <div class="hero-body">
@@ -61,6 +36,16 @@
     </footer>
   </div>
 </template>
+
+<script>
+import Navigation from '@/components/ui/Navigation';
+
+export default {
+  components: {
+    Navigation,
+  },
+};
+</script>
 
 <style scoped>
 .wrapper-content {

@@ -21,6 +21,8 @@
       <div class="content">
         {{ beer.description }}
       </div>
+
+      <button @click="addToFavorite">Ajouter au favori</button>
     </div>
   </div>
 </template>
@@ -40,6 +42,11 @@ export default {
         name: 'beer-id',
         params: { id: this.beer.id },
       };
+    },
+  },
+  methods: {
+    addToFavorite() {
+      this.$store.commit('toggleFavoriteBeers', this.beer);
     },
   },
 };

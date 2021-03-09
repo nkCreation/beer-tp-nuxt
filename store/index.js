@@ -1,5 +1,6 @@
 export const state = () => ({
   beers: [],
+  favoriteBeers: [],
 });
 
 export const getters = {
@@ -9,6 +10,16 @@ export const getters = {
 export const mutations = {
   setBeers(state, beers) {
     state.beers = beers;
+  },
+  toggleFavoriteBeers(state, beer) {
+    const foundIndex = state.favoriteBeers.findIndex((b) => b.id === beer.id);
+
+    if (foundIndex >= 0) {
+      state.favoriteBeers.splice(foundIndex, 1);
+      return;
+    }
+
+    state.favoriteBeers.push(beer);
   },
 };
 export const actions = {
